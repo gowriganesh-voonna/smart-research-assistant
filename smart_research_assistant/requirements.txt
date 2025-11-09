@@ -49,9 +49,7 @@ pillow==12.0.0
 filetype==1.2.0
 
 # === Numeric & Data Processing ===
-numpy==2.0.0
-pandas==2.2.2
-matplotlib==3.10.7
+
 
 # === Search ===
 tavily-python==0.7.12
