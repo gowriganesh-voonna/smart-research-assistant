@@ -1,21 +1,23 @@
 # === Core Frameworks ===
-fastapi==0.121.0
-uvicorn==0.38.0
 streamlit==1.51.0
 
-# === LangChain & LangGraph Stack ===
+# === FastAPI Backend (Optional: Only if you host FastAPI externally) ===
+fastapi==0.121.0
+uvicorn==0.38.0
+
+# === LangChain & LangGraph ===
 langchain==1.0.3
 langchain-core==1.0.3
 langchain-community==0.4.1
-langchain-classic==1.0.0
 langchain-text-splitters==1.0.0
+langchain-classic==1.0.0
 langsmith==0.4.40
 langgraph==1.0.2
-langgraph-prebuilt==1.0.2
 langgraph-sdk==0.2.9
 langgraph-checkpoint==3.0.0
+langgraph-prebuilt==1.0.2
 
-# === Google Gemini (Generative AI) ===
+# === Google Gemini ===
 langchain-google-genai==3.0.1
 google-api-core==2.28.1
 google-auth==2.42.1
@@ -25,12 +27,10 @@ protobuf==6.33.0
 grpcio==1.76.0
 grpcio-status==1.76.0
 
-# === Utilities & Models ===
+# === Utilities ===
 pydantic==2.12.3
 pydantic-settings==2.11.0
 dataclasses-json==0.6.7
-typing-inspect==0.9.0
-typing-inspection==0.4.2
 python-dotenv==1.2.1
 requests==2.32.5
 httpx==0.28.1
@@ -38,29 +38,26 @@ httpx-sse==0.4.3
 tiktoken==0.12.0
 tenacity==9.1.2
 
-# === PDF & File Utilities ===
+# === File & PDF Handling ===
 fpdf==1.7.2
 reportlab==4.4.4
+pillow==12.0.0
 filetype==1.2.0
 
-# === Data Handling & Visualization ===
+# === Numeric & Data Processing ===
 numpy==2.0.0
 pandas==2.2.2
 matplotlib==3.10.7
 
-# === Search & Agents ===
+# === Search ===
 tavily-python==0.7.12
 
-# === Miscellaneous ===
-GitPython==3.1.45
-aiohttp==3.13.2
-watchdog==6.0.0
-orjson==3.11.4
-colorama==0.4.6
-python-dateutil==2.9.0.post0
-pillow==12.0.0
-
-# === Optional but Recommended ===
+# === Async / Misc ===
 anyio==4.11.0
 starlette==0.49.3
-protobuf==6.33.0
+orjson==3.11.4
+python-dateutil==2.9.0.post0
+aiohttp==3.13.2
+watchdog==6.0.0
+GitPython==3.1.45
+colorama==0.4.6
