@@ -3,7 +3,7 @@ import streamlit as st
 import requests
 import os
 
-API_URL = "http://127.0.0.1:8000/research"  # FastAPI backend
+API_URL = "https://smart-research-backend.onrender.com/research" # FastAPI backend
 
 st.set_page_config(page_title="Smart Research Assistant", page_icon="🔍", layout="centered")
 
@@ -113,7 +113,7 @@ if st.button("Generate Research Report", type="primary"):
 
             except requests.exceptions.ConnectionError:
                 st.error("🚫 Unable to connect to backend server!")
-                st.info("Please make sure the FastAPI server is running on http://127.0.0.1:8000")
+                st.info("Please make sure the FastAPI server is running on https://smart-research-backend.onrender.com/research")
                 
             except Exception as e:
                 st.error(f"❌ An unexpected error occurred: {str(e)}")
