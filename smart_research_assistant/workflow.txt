@@ -1,0 +1,66 @@
+User Query (from UI )
+   │
+   ▼
+[Search Agent] ──► retrieves articles / web snippets using Tavily
+   │
+   ▼
+[Analysis Agent] ──► extracts patterns, sentiment, and themes
+   │
+   ▼
+[Summarizer Agent] ──► compiles a structured summary report
+   │
+   ▼
+Final Output to UI (Streamlit)
+
+
+
+
+
+
+
+
+                   ┌──────────────────────────────┐
+                   │        User Query            │
+                   │     (topic_query input)      │
+                   └─────────────┬────────────────┘
+                                 │
+                                 ▼
+                   ┌──────────────────────────────┐
+                   │        Search Agent           │
+                   │  → Fetch Tavily / Web data    │
+                   └─────────────┬────────────────┘
+                                 │
+                                 ▼
+                   ┌──────────────────────────────┐
+                   │       Analysis Agent          │
+                   │ → Analyze sentiment, themes   │
+                   └─────────────┬────────────────┘
+                                 │
+                                 ▼
+                   ┌──────────────────────────────┐
+                   │      Summarizer Agent         │
+                   │ → Generate structured summary │
+                   └─────────────┬────────────────┘
+                                 │
+                                 ▼
+                       ┌───────────────────┐
+                       │   Final Output    │
+                       │ Display in Streamlit │
+                       └───────────────────┘
+
+ResearchState {
+  topic_query → raw_documents → analysis_result → validation_result → final_summary → formatted_report + pdf_path
+}
+
+Agent Responsibilities:
+
+Search Agent: Web data retrieval via Tavily API
+
+Analysis Agent: Pattern extraction & theme identification
+
+Validator Agent: Quality assessment & recommendations
+
+Summarizer Agent: Structured content generation using Gemini
+
+Formatter Agent: Professional PDF report creation
+

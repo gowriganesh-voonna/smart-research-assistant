@@ -1,0 +1,27 @@
+smart_research_assistant/
+│
+├── server.py                # FastAPI backend that exposes /research API and triggers the LangGraph workflow
+├── main.py                  # Builds and runs the LangGraph pipeline (search → analysis → summary)
+├── requirements.txt         # Contains all Python dependencies required for backend + frontend
+├── Dockerfile               # Creates Docker image running FastAPI + Streamlit inside a container
+├── .dockerignore            # Excludes unnecessary files during Docker build (cache, venv, etc.)
+│
+├── ui/
+│   └── app.py               # Streamlit web UI used by the user to submit topics and view results
+│
+├── models/
+│   └── state_schema.py      # Defines the ResearchState schema shared across all LangGraph agents
+│
+├── agents/
+│   ├── search_agent.py      # Fetches relevant research articles using Tavily API
+│   ├── analysis_agent.py    # Processes and extracts insights from retrieved documents
+│   ├── summarizer_agent.py  # Uses Gemini model to generate structured academic summary
+│   └── formatter_agent.py      # generates the final PDF report
+│
+├── utils/
+│   └── pdf_utils.py         # Generates downloadable PDF report using ReportLab
+│
+├── outputs/
+│   └── (generated PDF summaries)   # Folder where all produced PDF reports are saved
+│
+└── README.md     # Documentation for project setup, usage, and architecture
